@@ -102,7 +102,7 @@
 <!--    </bean>-->
 <!--    <alias name="pointC" alias="PointC_Alias"/>-->
 
-    <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle" autowire="byName">
+    <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle" autowire="byName" scope="prototype">
 
     </bean>
 
