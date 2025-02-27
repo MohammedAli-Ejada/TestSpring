@@ -1,10 +1,16 @@
 package com.example.demoJavaSpring.TestCourse2;
 
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.boot.ApplicationContextFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
 import java.util.List;
 
-public class Triangle {
-    private  List<Point> pointList;
+public class Triangle implements ApplicationContextAware, BeanNameAware {
+ // private  List<Point> pointList;
 //    public List<Point> getPointList() {
 //        return pointList;
 //    }
@@ -28,6 +34,7 @@ public class Triangle {
     private Point Point2;
     private Point Point3;
 
+    private  ApplicationContext context;
     public Point getPoint1() {
         return Point1;
     }
@@ -58,5 +65,15 @@ public class Triangle {
                 "("+getPoint2().getX()+"," +getPoint2().getY()+")" +" , "+
                 "("+getPoint3().getX()+"," +getPoint3().getY()+")"
         );
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println(name);
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.context=applicationContext;
     }
 }
