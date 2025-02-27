@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define StudentRepository Bean -->
+<!--    <bean id="studentRepository" class="com.example.demoJavaSpring.StudentRepository"/>-->
+
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService"/>-->
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService">-->
+<!--        <property name="id" value="5" >-->
+<!--            -->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService">-->
+<!--        <constructor-arg value="first var in constructor list">-->
+<!--            -->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+
+     <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle">
+         <property name="Point1" ref="pointA">
+
+
+         </property>
+         <property name="Point2">
+             <bean class="com.example.demoJavaSpring.TestCourse2.Point">
+                 <property name="x" value="20">
+                 </property>
+                 <property name="y" value="0">
+                 </property>
+             </bean>
+         </property>
+         <property name="Point3" ref="PointC_Alias">
+
+         </property>
+     </bean>
+
+    <bean id="pointA" class="com.example.demoJavaSpring.TestCourse2.Point" name="PointA_Alias" >
+
+        <property name="x" value="0">
+
+        </property>
+        <property name="y" value="0">
+
+        </property>
+    </bean>
+
+
+
+    <bean id="pointC" class="com.example.demoJavaSpring.TestCourse2.Point">
+        <property name="x" value="0">
+
+        </property>
+        <property name="y" value="-20">
+
+        </property>
+
+    </bean>
+
+    <alias name="pointC" alias="PointC_Alias"/>
+
+</beans>
