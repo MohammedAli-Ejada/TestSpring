@@ -23,8 +23,6 @@
 
      <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle">
          <property name="Point1" ref="pointA">
-
-
          </property>
          <property name="Point2">
              <bean class="com.example.demoJavaSpring.TestCourse2.Point">
