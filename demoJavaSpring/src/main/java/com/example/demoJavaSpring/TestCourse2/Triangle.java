@@ -3,13 +3,14 @@ package com.example.demoJavaSpring.TestCourse2;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.boot.ApplicationContextFactory;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import java.util.List;
 
-public class Triangle implements ApplicationContextAware, BeanNameAware {
+public class Triangle implements ApplicationContextAware, BeanNameAware , InitializingBean , DisposableBean , IShape {
  // private  List<Point> pointList;
 //    public List<Point> getPointList() {
 //        return pointList;
@@ -59,6 +60,7 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
         Point3 = point3;
     }
 
+    @Override
     public void Draw(){
         System.out.println("Points Value => "+
                 "("+getPoint1().getX()+"," +getPoint1().getY()+")"+" , "+
@@ -75,5 +77,25 @@ public class Triangle implements ApplicationContextAware, BeanNameAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.context=applicationContext;
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("afterPropertiesSet");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("destroy");
+
+    }
+
+    public void MyInit() throws Exception {
+        System.out.println("afterPropertiesSet");
+    }
+
+    public void MyCleanUp() throws Exception {
+        System.out.println("destroy");
+
     }
 }
