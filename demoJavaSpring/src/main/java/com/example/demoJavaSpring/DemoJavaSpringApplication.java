@@ -31,7 +31,7 @@ public class DemoJavaSpringApplication {
 		//work with interfaces
 		ApplicationContext context2 = new ClassPathXmlApplicationContext("Beans.xml");
 		IShape Shape=(IShape) context.getBean("circle");
-		//Shape.Draw();
+		Shape.Draw();
 
 		ApplicationContext context3 = new AnnotationConfigApplicationContext(AppConfig.class);
 		IShape Shape2=(IShape) context3.getBean("line");

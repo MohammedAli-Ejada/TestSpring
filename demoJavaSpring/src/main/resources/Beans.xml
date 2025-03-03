@@ -22,7 +22,7 @@ default-init-method="MyInit" default-destroy-method="MyCleanUp"
 <!--        </constructor-arg>-->
 <!--    </bean>-->
 
-
+<!--object injection inner bean , Alias-->
 <!--     <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle">-->
 <!--         <property name="Point1" ref="pointA">-->
 <!--         </property>-->
@@ -62,7 +62,7 @@ default-init-method="MyInit" default-destroy-method="MyCleanUp"
 <!--    </bean>-->
 
 <!--    <alias name="pointC" alias="PointC_Alias"/>-->
-
+<!--Collection Injection-->
 <!--    <bean id="triangle" class="com.example.demoJavaSpring.TestCourse2.Triangle">-->
 <!--        <property name="pointList">-->
 <!--            <list>-->
@@ -147,12 +147,21 @@ default-init-method="MyInit" default-destroy-method="MyCleanUp"
 <!--        <property name="Center" ref="center"/>-->
 
     </bean>
-    <bean id="center" class="com.example.demoJavaSpring.TestCourse2.Point"  >
-        <qualifier value="circleRelated"/>
-        <property name="x" value="0">
+    <bean id="center2" class="com.example.demoJavaSpring.TestCourse2.Point"  >
+        <qualifier value="circleRelated2"/>
+        <property name="x" value="10">
 
         </property>
-        <property name="y" value="0">
+        <property name="y" value="550">
+
+        </property>
+    </bean>
+    <bean id="center" class="com.example.demoJavaSpring.TestCourse2.Point"  >
+        <qualifier value="circleRelated"/>
+        <property name="x" value="1">
+
+        </property>
+        <property name="y" value="1">
 
         </property>
     </bean>
