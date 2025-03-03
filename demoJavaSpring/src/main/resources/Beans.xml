@@ -7,16 +7,16 @@ default-init-method="MyInit" default-destroy-method="MyCleanUp"
 >
 
     <!-- Define StudentRepository Bean -->
-<!--    <bean id="studentRepository" class="com.example.demoJavaSpring.StudentRepository"/>-->
+<!--    <bean id="studentRepository" class="com.example.demoJavaSpring.TestCourse2.StudentRepository"/>-->
 
-<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService"/>-->
-<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService">-->
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.TestCourse2.StudentService"/>-->
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.TestCourse2.StudentService">-->
 <!--        <property name="id" value="5" >-->
 <!--            -->
 <!--        </property>-->
 <!--    </bean>-->
 
-<!--    <bean id="studentService" class="com.example.demoJavaSpring.StudentService">-->
+<!--    <bean id="studentService" class="com.example.demoJavaSpring.TestCourse2.StudentService">-->
 <!--        <constructor-arg value="first var in constructor list">-->
 <!--            -->
 <!--        </constructor-arg>-->

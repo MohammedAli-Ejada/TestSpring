@@ -1,8 +1,6 @@
-package com.example.demoJavaSpring;
+package com.example.demoJavaSpring.TestCourse2;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

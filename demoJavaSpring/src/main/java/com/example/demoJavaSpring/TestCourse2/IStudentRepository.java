@@ -1,4 +1,4 @@
-package com.example.demoJavaSpring;
+package com.example.demoJavaSpring.TestCourse2;
 
 import java.util.List;
 

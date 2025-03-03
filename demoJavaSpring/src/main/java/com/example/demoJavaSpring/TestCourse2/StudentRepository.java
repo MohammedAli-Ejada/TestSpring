@@ -1,4 +1,4 @@
-package com.example.demoJavaSpring;
+package com.example.demoJavaSpring.TestCourse2;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
