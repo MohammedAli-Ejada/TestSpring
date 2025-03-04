@@ -53,7 +53,17 @@ public class StudentRepository implements IStudentRepository {
         students.add(student);
     }
 
+    @Override
+    public void Update(int id, Student student) {
+        Student student1=getStudentById(id);
+        student1.setName(student.getName());
+        student1.setCourseName(student.getCourseName());
+    }
 
+    @Override
+    public void Delete(int Id) {
+        students.removeIf(s->s.getId()==Id);
+    }
 
 
 }

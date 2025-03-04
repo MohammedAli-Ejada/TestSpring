@@ -21,4 +21,14 @@ public class StudentRepoSql implements IStudentRepository{
     public void Add(Student student) {
 
     }
+
+    @Override
+    public void Update(int id, Student student) {
+
+    }
+
+    @Override
+    public void Delete(int Id) {
+
+    }
 }

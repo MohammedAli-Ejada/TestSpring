@@ -12,7 +12,7 @@ public class StudentController {
 
     //@Autowired
     private  StudentService studentService;
-    @Autowired
+   // @Autowired
     public StudentController(StudentService sstudentServic){
         this.studentService=sstudentServic;
     }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StudentService {
+public class StudentService implements IStudentService{
 
 
 
@@ -30,16 +30,25 @@ public class StudentService {
 
     }*/
 
+    @Override
     public List<Student> GetAll() {
         return studentRepository.GetAll();
     }
-
+    @Override
     public Student getStudentById(int id) {
         return studentRepository.getStudentById(id);
     }
-
+    @Override
     public void Add(Student student){
         studentRepository.Add(student);
+    }
+    @Override
+    public void Update(int id, Student student) {
+        studentRepository.Update(id,student);
+    }
+    @Override
+    public void Delete(int Id) {
+        studentRepository.Delete(Id);
     }
 
 }

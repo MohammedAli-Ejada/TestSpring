@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+</head>
+<body>
+<h2>Employee List</h2>
+<a href="/s/showAdd">Add New Student</a>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>CourseName</th>
+  </tr>
+  <tr th:each="emp : ${students}">
+    <td th:text="${emp.id}"></td>
+    <td><a th:href="@{/s/{id}(id=${emp.id})}" th:text="${emp.name}"></a></td>
+    <td th:text="${emp.courseName}"></td>
+
+    <td>
+      <a th:href="@{/s/showEdit/{id}(id=${emp.id})}">Edit</a> |
+      <a th:href="@{/s/delete/{id}(id=${emp.id})}" onclick="return confirm('Are you sure?');">Delete</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+<body>
+<h2>Student Form</h2>
+<form th:action="@{/s/edit}" th:object="${student}" method="post">
+  ID: <input type="number" th:field="*{id}" required/><br>
+  Name: <input type="text" th:field="*{name}" required/><br>
+  Course Name: <input type="text" th:field="*{courseName}" required/><br>
+
+  <input type="submit" value="Save">
+</form>
+<a href="/s">Back to List</a>
+</body>
+</html>
