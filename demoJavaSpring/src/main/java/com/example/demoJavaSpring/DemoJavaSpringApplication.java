@@ -12,12 +12,12 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
 public class DemoJavaSpringApplication {
 	public static void main(String[] args)
 	{
 		SpringApplication.run(DemoJavaSpringApplication.class, args);
-
+/*
 		//ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		context.registerShutdownHook();
@@ -38,6 +38,7 @@ public class DemoJavaSpringApplication {
 		Shape2.Draw();
 
 		System.out.println(context.getMessage("SayHallo",null,"Default Say Hello" , null));
+		*/
 	}
 
 }
