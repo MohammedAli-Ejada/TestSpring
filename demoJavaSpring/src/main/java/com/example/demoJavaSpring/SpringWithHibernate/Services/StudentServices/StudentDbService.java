@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StudentDbService implements IService<StudentDB , Long> {
+public class StudentDbService implements IStudentDbService {
 
     private IStudentDbRepository studentDbRepository;
 
